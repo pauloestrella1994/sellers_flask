@@ -40,10 +40,9 @@ class BaseDao:
         self.__session.commit()
         return model
 
-    # delete
+    #delete
     def delete(self):
         model = self.read(id)
         self.__session.delete(model)
         self.__session.commit()
         return {'sucess': True}
-    
