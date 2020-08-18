@@ -16,3 +16,34 @@ class BaseDao:
         engine = db.create_engine(
             f'{self.__connector}://{self.__username}:{self.__password}@{self.__hostname}/{self.__database}')
 
+        Session = db.orm.sessionmaker()
+        Session.configure(bind=engine)
+        self.__session = Session()
+
+#--------------crud method in database------------------
+
+    #read
+    def read(self, id: int=None):
+        if id:
+            return self.__session.query(self.__model_class).get(id)
+        return self.__session.query(self.__model_class).all()
+
+    #create
+    def insert(self, model):
+        self.__session.add(model)
+        self.__session.commit()
+        return model.id
+
+    #update
+    def update(self, model):
+        self.__session.merge(model)
+        self.__session.commit()
+        return model
+
+    # delete
+    def delete(self):
+        model = self.read(id)
+        self.__session.delete(model)
+        self.__session.commit()
+        return {'sucess': True}
+    
