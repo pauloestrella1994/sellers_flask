@@ -42,10 +42,54 @@ class Sellers(Base, BaseModel):
     __portifolio_size = db.Column('portifolio_size', db.Integer())
     __is_manufacturer = db.Column('is_manufacturer', db.Boolean())
     __payment_blocked = db.Column('payment_blocked', db.Boolean())
-    __payment_blocked_reason = db.Column('payment_blocked_reaosn', db.String(length=16))
+    __payment_blocked_reason = db.Column('payment_blocked_reason', db.String(length=16))
 
-    def __init__(self):
-        super().__init__()
+    def __init__(self, brand: str = '', mobile_phone: str = '', about: str = '', cnpj: str = ''
+                , company_name: str = '', iugu_account_id: str = '', origin: str = '', blocked: bool = False
+                , paused: bool = False, certificate_url: str = '', ctr: str = '', features: str = ''
+                , ie: str = '', status: str = '', terms_of_use_version: str = '', logo_url: str = ''
+                , phone: str = '', account_executive_id: str = '', invite_id: str = '', invoice_default_serial_number: int = 0
+                , business_type: str = '', invoice_initial_number: int = 0, owner_id: str = '', branded_stores: str = ''
+                , last_blocked_on, blocked_reason: str = '', has_withdraw_rejection: bool = False, olist_responsible: str = ''
+                , signup_origin: str= '', plan_type: str ='', search_vector: str='', portifolio_size: int = 0
+                , is_manufacturer: bool = False, payment_blocked: bool = False, payment_blocked_reason: str  = ''):
+
+        self.__brand = brand
+        self.__mobile_phone = mobile_phone
+        self.__about = about
+        self.__cnpj = cnpj
+        self.__company_name = company_name
+        self.__iugu_account_id = iugu_account_id
+        self.__origin = origin
+        self.__blocked = blocked
+        self.__paused = paused
+        self.__certificate_url = certificate_url
+        self.__ctr = ctr
+        self.__features = features
+        self.__ie = ie
+        self.__status = status
+        self.__terms_of_use_version = terms_of_use_version
+        self.__logo_url = logo_url
+        self.__phone = phone
+        self.__account_executive_id = account_executive_id
+        self.__invite_id = invite_id
+        self.__invoice_default_serial_number = invoice_default_serial_number
+        self.__business_type = business_type
+        self.__invoice_initial_number = invoice_initial_number
+        self.__owner_id = owner_id
+        self.__branded_stores = branded_stores
+        self.__last_blocked_on = last_blocked_on
+        self.__blocked_reason = blocked_reason
+        self.__has_withdraw_rejection = has_withdraw_rejection
+        self.__olist_responsible = olist_responsible
+        self.__signup_origin = signup_origin
+        self.__plan_type = plan_type
+        self.__search_vector = search_vector
+        self.__portifolio_size = portifolio_size
+        self.__is_manufacturer = is_manufacturer
+        self.__payment_blocked = payment_blocked
+        self.__payment_blocked_reason = payment_blocked_reason
+        super().__init__(id, created_at, updated_at)
 
     @property
     def brand(self) -> str:
@@ -296,11 +340,11 @@ class Sellers(Base, BaseModel):
         self.__search_vector = search_vector
 
     @property
-    def portifolio_size(self) -> str:
+    def portifolio_size(self) -> int:
         return self.__portifolio_size
 
     @portifolio_size.setter
-    def portifolio_size(self, portifolio_size: str):
+    def portifolio_size(self, portifolio_size: int):
         self.__portifolio_size = portifolio_size
 
     @property
@@ -326,6 +370,8 @@ class Sellers(Base, BaseModel):
     @payment_blocked_reason.setter
     def payment_blocked_reason(self, payment_blocked_reason: str):
         self.__payment_blocked_reason = payment_blocked_reason
+
+
 
 
 
