@@ -371,9 +371,44 @@ class Sellers(Base, BaseModel):
     def payment_blocked_reason(self, payment_blocked_reason: str):
         self.__payment_blocked_reason = payment_blocked_reason
 
-
-
-
-
-
-
+    def to_json(self):
+        return {
+            'id': self.id,
+            'created_at': self.created_at,
+            'updated_at': self.updated_at,
+            'brand': self.brand,
+            'mobile_phone': self.mobile_phone,
+            'abour': self.about,
+            'cnpj': self.cnpj,
+            'company_name': self.company_name,
+            'iugu_account_id': self.iugu_account_id,
+            'origin': self.origin,
+            'blocked': self.blocked,
+            'paused': self.paused,
+            'certificate_url': self.certificate_url,
+            'ctr': self.ctr,
+            'features': self.features,
+            'ie': self.ie,
+            'status': self.status,
+            'terms_of_use_version': self.__terms_of_use_version,
+            'logo_url': self.logo_url,
+            'phone': self.phone,
+            'account_executive_id': self.account_executive_id,
+            'invite_id': self.invite_id,
+            'invoice_default_serial_number': self.invoice_default_serial_number,
+            'business_type': self.business_type,
+            'invoice_initial_number': self.invoice_default_serial_number,
+            'owner_id': self.owner_id,
+            'branded_stores': self.branded_stores,
+            'last_blocked_on': self.last_blocked_on,
+            'blocked_reason': self.blocked_reason,
+            'has_withdraw_rejection': self.has_withdraw_rejection,
+            'olist_responsible': self.olist_responsible,
+            'signup_origin': self.signup_origin,
+            'plan_type': self.plan_type,
+            'search_vector': self.search_vector,
+            'portifolio_size': self.portifolio_size,
+            'is_manufacturer': self.is_manufacturer,
+            'payment_blocked': self.payment_blocked,
+            'payment_blocked_reason': self.payment_blocked_reason
+        }
