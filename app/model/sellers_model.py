@@ -43,4 +43,291 @@ class Sellers(Base, BaseModel):
     __is_manufacturer = db.Column('is_manufacturer', db.Boolean())
     __payment_blocked = db.Column('payment_blocked', db.Boolean())
     __payment_blocked_reason = db.Column('payment_blocked_reaosn', db.String(length=16))
-    
+
+    def __init__(self):
+        super().__init__()
+
+    @property
+    def brand(self) -> str:
+        return self.__brand
+
+    @brand.setter
+    def brand(self, brand: str):
+        self.__brand = brand
+
+    @property
+    def mobile_phone(self) -> str:
+        return self.__mobile_phone
+
+    @mobile_phone.setter
+    def mobile_phone(self, mobile_phone: str):
+        self.__mobile_phone = mobile_phone
+
+    @property
+    def about(self) -> str:
+        return self.__about
+
+    @about.setter
+    def about(self, about: str):
+        self.__about = about
+
+    @property
+    def cnpj(self) -> str:
+        return self.__cnpj
+
+    @cnpj.setter
+    def cnpj(self, cnpj: str):
+        self.__cnpj = cnpj
+
+    @property
+    def company_name(self) -> str:
+        return self.__company_name
+
+    @company_name.setter
+    def company_name(self, company_name: str):
+        self.__company_name = company_name
+
+    @property
+    def iugu_account_id(self) -> str:
+        return self.__iugu_account_id
+
+    @iugu_account_id.setter
+    def iugu_account_id(self, iugu_account_id: str):
+        self.__iugu_account_id = iugu_account_id
+
+    @property
+    def origin(self) -> str:
+        return self.__origin
+
+    @origin.setter
+    def origin(self, origin: str):
+        self.__origin = origin
+
+    @property
+    def blocked(self) -> bool:
+        return self.__blocked
+
+    @blocked.setter
+    def blocked(self, blocked: bool):
+        self.__blocked = blocked
+
+    @property
+    def paused(self) -> bool:
+        return self.__paused
+
+    @paused.setter
+    def paused(self, paused: bool):
+        self.__paused = paused
+
+    @property
+    def certificate_url(self) -> str:
+        return self.__certificate_url
+
+    @certificate_url.setter
+    def certificate_url(self, certificate_url: str):
+        self.__certificate_url = certificate_url
+
+    @property
+    def ctr(self) -> str:
+        return self.__ctr
+
+    @ctr.setter
+    def ctr(self, ctr: str):
+        self.__ctr = ctr
+
+    @property
+    def features(self) -> str:
+        return self.__features
+
+    @features.setter
+    def features(self, features: str):
+        self.__features = features
+
+    @property
+    def ie(self) -> str:
+        return self.__ie
+
+    @ie.setter
+    def ie(self, ie: str):
+        self.__ie = ie
+
+    @property
+    def status(self) -> str:
+        return self.__status
+
+    @status.setter
+    def status(self, status: str):
+        self.__status = status
+
+    @property
+    def terms_of_use_version(self) -> str:
+        return self.__terms_of_use_version
+
+    @terms_of_use_version.setter
+    def terms_of_use_version(self, terms_of_use_version: str):
+        self.__terms_of_use_version = terms_of_use_version
+
+    @property
+    def logo_url(self) -> str:
+        return self.__logo_url
+
+    @logo_url.setter
+    def logo_url(self, logo_url: str):
+        self.__logo_url = logo_url
+
+    @property
+    def phone(self) -> str:
+        return self.__phone
+
+    @phone.setter
+    def phone(self, phone: str):
+        self.__phone = phone
+
+    @property
+    def account_executive_id(self) -> str:
+        return self.__account_executive_id
+
+    @account_executive_id.setter
+    def account_executive_id(self, account_executive_id: str):
+        self.__account_executive_id = account_executive_id
+
+    @property
+    def invite_id(self) -> str:
+        return self.__invite_id
+
+    @invite_id.setter
+    def invite_id(self, invite_id: str):
+        self.__invite_id = invite_id
+
+    @property
+    def invoice_default_serial_number(self) -> int:
+        return self.__invoice_default_serial_number
+
+    @invoice_default_serial_number.setter
+    def invoice_default_serial_number(self, invoice_default_serial_number: int):
+        self.__invoice_default_serial_number = invoice_default_serial_number
+
+    @property
+    def business_type(self) -> str:
+        return self.__business_type
+
+    @business_type.setter
+    def business_type(self, business_type: str):
+        self.__business_type = business_type
+
+    @property
+    def invoice_initial_number(self) -> int:
+        return self.__invoice_initial_number
+
+    @invoice_initial_number.setter
+    def invoice_initial_number(self, invoice_initial_number: int):
+        self.__invoice_initial_number = invoice_initial_number
+
+    @property
+    def owner_id(self) -> str:
+        return self.__owner_id
+
+    @owner_id.setter
+    def owner_id(self, owner_id: str):
+        self.__owner_id = owner_id
+
+    @property
+    def branded_stores(self) -> str:
+        return self.__branded_stores
+
+    @branded_stores.setter
+    def branded_stores(self, branded_stores: str):
+        self.__branded_stores = branded_stores
+
+    @property
+    def last_blocked_on(self):
+        return self.__last_blocked_on
+
+    @last_blocked_on.setter
+    def last_blocked_on(self, last_blocked_on):
+        self.__last_blocked_on = last_blocked_on
+
+    @property
+    def blocked_reason(self) -> str:
+        return self.__blocked_reason
+
+    @blocked_reason.setter
+    def blocked_reason(self, blocked_reason: str):
+        self.__blocked_reason = blocked_reason
+
+    @property
+    def has_withdraw_rejection(self) -> bool:
+        return self.__has_withdraw_rejection
+
+    @has_withdraw_rejection.setter
+    def has_withdraw_rejection(self, has_withdraw_rejection: bool):
+        self.__has_withdraw_rejection = has_withdraw_rejection
+
+    @property
+    def olist_responsible(self) -> str:
+        return self.__olist_responsible
+
+    @olist_responsible.setter
+    def olist_responsible(self, olist_responsible: str):
+        self.__olist_responsible = olist_responsible
+
+    @property
+    def signup_origin(self) -> str:
+        return self.__signup_origin
+
+    @signup_origin.setter
+    def signup_origin(self, signup_origin: str):
+        self.__signup_origin = signup_origin
+
+    @property
+    def plan_type(self) -> str:
+        return self.__plan_type
+
+    @plan_type.setter
+    def plan_type(self, plan_type: str):
+        self.__plan_type = plan_type
+
+    @property
+    def search_vector(self) -> str:
+        return self.__search_vector
+
+    @search_vector.setter
+    def search_vector(self, search_vector: str):
+        self.__search_vector = search_vector
+
+    @property
+    def portifolio_size(self) -> str:
+        return self.__portifolio_size
+
+    @portifolio_size.setter
+    def portifolio_size(self, portifolio_size: str):
+        self.__portifolio_size = portifolio_size
+
+    @property
+    def is_manufacturer(self) -> bool:
+        return self.__is_manufacturer
+
+    @is_manufacturer.setter
+    def is_manufacturer(self, is_manufacturer: bool):
+        self.__is_manufacturer = is_manufacturer
+
+    @property
+    def payment_blocked(self) -> bool:
+        return self.__payment_blocked
+
+    @payment_blocked.setter
+    def payment_blocked(self, payment_blocked: bool):
+        self.__payment_blocked = payment_blocked
+
+    @property
+    def payment_blocked_reason(self) -> str:
+        return self.__payment_blocked_reason
+
+    @payment_blocked_reason.setter
+    def payment_blocked_reason(self, payment_blocked_reason: str):
+        self.__payment_blocked_reason = payment_blocked_reason
+
+
+
+
+
