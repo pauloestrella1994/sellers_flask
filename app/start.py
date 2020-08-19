@@ -14,7 +14,7 @@ def initial():
 
 api.add_resource(
     SellersController,
-    '/api/sellers/', '/api/sellers/<int:id>',
+    '/api/sellers/', '/api/sellers/<id>',
     endpoint='sellers')
 
 app.run(debug=True)
