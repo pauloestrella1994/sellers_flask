@@ -50,7 +50,7 @@ class Sellers(Base, BaseModel):
                 , ie: str = '', status: str = '', terms_of_use_version: str = '', logo_url: str = ''
                 , phone: str = '', account_executive_id: str = '', invite_id: str = '', invoice_default_serial_number: int = 0
                 , business_type: str = '', invoice_initial_number: int = 0, owner_id: str = '', branded_stores: str = ''
-                , last_blocked_on, blocked_reason: str = '', has_withdraw_rejection: bool = False, olist_responsible: str = ''
+                , last_blocked_on:str = '', blocked_reason: str = '', has_withdraw_rejection: bool = False, olist_responsible: str = ''
                 , signup_origin: str= '', plan_type: str ='', search_vector: str='', portifolio_size: int = 0
                 , is_manufacturer: bool = False, payment_blocked: bool = False, payment_blocked_reason: str  = ''):
 
@@ -284,11 +284,11 @@ class Sellers(Base, BaseModel):
         self.__branded_stores = branded_stores
 
     @property
-    def last_blocked_on(self):
+    def last_blocked_on(self) -> str:
         return self.__last_blocked_on
 
     @last_blocked_on.setter
-    def last_blocked_on(self, last_blocked_on):
+    def last_blocked_on(self, last_blocked_on: str):
         self.__last_blocked_on = last_blocked_on
 
     @property
