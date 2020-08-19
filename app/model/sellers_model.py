@@ -371,15 +371,6 @@ class Sellers(Base, BaseModel):
     def payment_blocked_reason(self, payment_blocked_reason: str):
         self.__payment_blocked_reason = payment_blocked_reason
 
-    def __str__(self):
-        return f'''{self.id};{self.created_at};{self.updated_at};{self.brand};{self.mobile_phone};{self.about};{self.cnpj};
-                    {self.company_name};{self.iugu_account_id};{self.origin};{self.blocked};{self.paused};{self.certificate_url};{self.ctr};
-                    {self.features};{self.ie};{self.status};{self.terms_of_use_version};{self.logo_url};{self.phone};{self.account_executive_id};
-                    {self.invite_id};{self.invoice_initial_number};{self.owner_id};{self.branded_stores};{self.last_blocked_on};{self.blocked_reason};
-                    {self.has_withdraw_rejection};{self.olist_responsible};{self.signup_origin};{self.plan_type};{self.search_vector};
-                    {self.portifolio_size};{self.is_manufacturer};{self.payment_blocked};{self.payment_blocked_reason}
-                '''
-
     def to_dict(self):
         return {
             'id': self.id,
