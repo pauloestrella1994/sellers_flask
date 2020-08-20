@@ -89,7 +89,6 @@ class Sellers(Base, BaseModel):
         self.__is_manufacturer = is_manufacturer
         self.__payment_blocked = payment_blocked
         self.__payment_blocked_reason = payment_blocked_reason
-        super().__init__(id, created_at, updated_at)
 
     @property
     def brand(self) -> str:

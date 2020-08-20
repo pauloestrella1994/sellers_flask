@@ -17,8 +17,7 @@ class SellersController(Resource):
     def post(self):
         data = request.get_json()
         sellers = Sellers(**data)
-        sellers.id = id
-        model = self.__dao.update(sellers)
+        model = self.__dao.create(sellers)
         return jsonify(model.to_dict())
 
     def put(self, id):

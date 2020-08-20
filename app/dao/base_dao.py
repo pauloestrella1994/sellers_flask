@@ -32,7 +32,7 @@ class BaseDao:
     def insert(self, model):
         self.__session.add(model)
         self.__session.commit()
-        return model.id
+        return model
 
     #update
     def update(self, model):
