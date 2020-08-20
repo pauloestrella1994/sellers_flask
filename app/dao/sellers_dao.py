@@ -17,7 +17,7 @@ class SellersDao(BaseDao):
 
     #update
     def update(self, model:Sellers) -> Sellers:
-        return self.read(model.id)
+        return super().update(model)
 
     #delete
     def delete(self, id:str) -> dict:
