@@ -51,8 +51,8 @@ class Sellers(Base, BaseModel):
                 , phone: str = '', account_executive_id: str = '', invite_id: str = '', invoice_default_serial_number: int = 0
                 , business_type: str = '', invoice_initial_number: int = 0, owner_id: str = '', branded_stores: str = ''
                 , last_blocked_on:str = '', blocked_reason: str = '', has_withdraw_rejection: bool = False, olist_responsible: str = ''
-                , signup_origin: str= '', plan_type: str ='', search_vector: str='', portifolio_size: int = 0
-                , is_manufacturer: bool = False, payment_blocked: bool = False, payment_blocked_reason: str  = ''):
+                , signup_origin: str= '', plan_type: str = '', search_vector: str= '', portifolio_size: int = 0
+                , is_manufacturer: bool = False, payment_blocked: bool = False, payment_blocked_reason: str = ''):
 
         self.__brand = brand
         self.__mobile_phone = mobile_phone

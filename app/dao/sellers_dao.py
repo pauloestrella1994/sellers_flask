@@ -20,5 +20,5 @@ class SellersDao(BaseDao):
         model.id = super().update(model)
 
     #delete
-    def delete(self, id:str ='') -> dict:
+    def delete(self, id:str) -> dict:
         return super().delete(id)

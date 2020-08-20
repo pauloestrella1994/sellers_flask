@@ -23,7 +23,7 @@ class BaseDao:
 #--------------crud method in database------------------
 
     #read
-    def read(self, id: int=None):
+    def read(self, id: str=None):
         if id:
             return self.__session.query(self.__model_class).get(id)
         return self.__session.query(self.__model_class).all()
@@ -41,7 +41,7 @@ class BaseDao:
         return model
 
     # delete
-    def delete(self):
+    def delete(self, id):
         model = self.read(id)
         self.__session.delete(model)
         self.__session.commit()

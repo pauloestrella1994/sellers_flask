@@ -16,7 +16,7 @@ class BaseModel:
         return self.__id
 
     @id.setter
-    def id(self, id):
+    def id(self, id: str):
         self.__id = id
 
     @property
@@ -24,7 +24,7 @@ class BaseModel:
         return self.__created_at
 
     @created_at.setter
-    def created_at(self, created_at):
+    def created_at(self, created_at: str):
         self.__created_at = created_at
 
     @property
@@ -32,5 +32,5 @@ class BaseModel:
         return self.__updated_at
 
     @updated_at.setter
-    def updated_at(self, updated_at):
+    def updated_at(self, updated_at: str):
         self.__updated_at = updated_at
