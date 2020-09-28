@@ -26,7 +26,7 @@ CREATE TABLE `sellers` (
   `invoice_initial_number` decimal(10,0) NOT NULL,
   `owner_id` varchar(36) DEFAULT NULL,
   `branded_stores` varchar(256) NOT NULL,
-  `last_blocked_on` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `last_blocked_on` varchar(256) NOT NULL,
   `blocked_reason` varchar(64) NOT NULL,
   `has_withdraw_rejection` tinyint(1) NOT NULL,
   `olist_responsible` varchar(254) NOT NULL,

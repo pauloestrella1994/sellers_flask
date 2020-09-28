@@ -13,12 +13,12 @@ class SellersDao(BaseDao):
 
     #create
     def create(self, model:Sellers) -> Sellers:
-        model.id = super().insert(model)
+        return super().insert(model)
 
     #update
     def update(self, model:Sellers) -> Sellers:
-        model.id = super().update(model)
+        return super().update(model)
 
     #delete
-    def delete(self, id:str ='') -> dict:
+    def delete(self, id:str) -> dict:
         return super().delete(id)
