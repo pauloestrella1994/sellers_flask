@@ -3,6 +3,7 @@ CREATE TABLE `sellers` (
   `updated_at` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
   `id` varchar(36) NOT NULL,
   `brand` varchar(256) NOT NULL,
+  `mobile_phone` varchar(16) NOT NULL,
   `about` text DEFAULT NULL,
   `cnpj` varchar(14) DEFAULT NULL,
   `company_name` varchar(255) DEFAULT NULL,
